@@ -1,0 +1,35 @@
+<html>
+   <head>
+	<script type="text/javascript" src="uzhavu.js"></script>
+	<script>
+
+
+		var str = {"desc":'Lo',
+			"shot_desc": "shot description",
+			'else_one': 0,
+			'else_two': 0
+		};
+		
+	</script>
+
+   </head>
+<body>
+<div data-zha-if="str.desc ==''">
+	<div id="test" data-zha-bind="str.desc"></div>
+</div>
+<div data-zha-elseif="str.else_one">
+	<div id="test" data-zha-bind="str.else_one"></div>
+</div>
+<div data-zha-elseif="str.else_two">
+	<div id="test" data-zha-bind="str.else_two"></div>
+</div>
+<div data-zha-else>
+	<div id="test" data-zha-bind="str.shot_desc"></div>
+</div>
+
+<div>
+	<div id="test" data-zha-bind="str.shot_desc"></div>
+</div>
+
+</body>
+</html>
