@@ -20,6 +20,13 @@ String.prototype.lpad = function(n, t){
 	
 	return pad+this;
 }
+
+String.prototype.capitalize = function () {
+  return this.replace(/\b(\w)/g, function (match) {
+    return match.toUpperCase();
+  });
+};
+
 String.prototype.removeAttr = function(attr){
 	if(attr == 'bind')
 		return this.replace(/data-zha-bind\s*=\s*(\"|\')[\w.\s]*(\"|\')/ig, '');//return this.replace(/((data-zha-bind)(\s*=\s*)\"(\s*\w+.*)\")/ig, '');
